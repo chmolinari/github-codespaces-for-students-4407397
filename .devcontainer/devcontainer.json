@@ -4,5 +4,21 @@
     },
     "updateContentCommand": "npm install",
     "postAttachCommand": "npm start",
-    "remoteUser": "node"
+    "remoteUser": "node",
+    "forwardPorts": [3000],
+    "portsAttributes": {
+        "3000": {
+            "label": "Application",
+            "onAutoForward": "openBrowser"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["esbenp.prettier-vscode"],
+            "settings": {
+                "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+                "editor.formatOnSave": true
+            }
+        }
+    }
 }
